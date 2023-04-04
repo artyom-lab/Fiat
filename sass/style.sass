@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap')
+
+$transition: .3s
+
+$color-white: #FFF
+$color-black: #000
+$color-green-1: #44931f
+$color-green-2: #c0dab4
+$color-green-3: #bcd8b0
+$color-border: #c7debb
+$color-footer: #c7debb
+$color-footer-2: #e3efde
+
+* 
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+body 
+	font-family: 'Roboto', sans-serif
+	background-color: $color-white
+	display: flex
+	color: $color-black
+	flex-direction: column
+	min-height: 100vh
+	&.menubar-in
+		overflow: hidden
+
+a 
+	text-decoration: none !important
+	transition: $transition
+	&:hover 
+		color: initial
+		opacity: .7
+	&.black 
+		color: $color-black
+		&:hover 
+			color: $color-black	
+	&.white 
+		color: $color-white
+		&:hover 
+			color: $color-white
+	&.link-green 
+		font-weight: bold
+		color: $color-green-1
+		&:hover 
+			color: $color-green-1	
+
+@media (min-width: 1440px)
+	.container 
+		max-width: 1110px
+
+.row-4
+	margin-left: -4px
+	margin-right: -4px
+	> [class*='col']
+		padding-left: 4px
+		padding-right: 4px
+
+.row-8
+	margin-left: -8px
+	margin-right: -8px
+	> [class*='col']
+		padding-left: 8px
+		padding-right: 8px
+
+.row-10
+	margin-left: -10px
+	margin-right: -10px
+	> [class*='col']
+		padding-left: 10px
+		padding-right: 10px
+
+.fz-10
+	font-size: 10px
+.fz-12
+	font-size: 12px
+
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
+	a 
+		color: $color-black
+
+.h1, h1
+	font-size: 25px
+	font-family: 'Domine', sans-serif
+	font-weight: bold
+
+.h1
+	@media (min-width: 992px)
+		font-size: 30px
+
+.h2, h2
+	font-size: 20px
+	font-family: 'Domine', sans-serif
+	font-weight: bold
+	@media (max-width: 767.98px)
+		font-size: 14px
+
+.h3, h3
+	font-size: 22px
+	font-weight: bold
+
+.h4, h4
+	font-size: 15px
+	font-family: 'Domine', sans-serif
+	font-weight: bold
+	@media (max-width: 767.98px)
+		font-size: 14px
+
+.h5, h5
+	font-size: 14px
+	font-family: 'Domine', sans-serif
+	font-weight: bold
+
+.date
+	font-family: 'Domine', sans-serif
+	font-size: 18px
+	font-weight: 500
+
+.title-green
+	color: $color-green-1
+	text-transform: uppercase
+	font-size: 11px
+	font-weight: 500
+
+.title-economic
+	font-size: 13px
+
+.title-green-big
+	color: $color-green-1
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: bold
+
+.title-black
+	font-size: 22px
+	font-weight: bold
+
+.lh-1
+	line-height: 1
+.lh-12
+	line-height: 1.2
+
+.section-190
+	padding-bottom: 54px
+	margin-top: 190px
+	@media (max-width: 575.98px)
+		margin-top: 170px
+
+.language
+	vertical-align: middle
+	color: $color-green-1
+	text-transform: uppercase
+	font-size: 11px
+	&.active
+		font-weight: bold
+	&:hover
+		color: $color-green-1
+.line
+	font-size: 11px
+	vertical-align: middle
+	color: $color-green-1
+	margin: 0 4px
+
+.nav-box
+	width: 100%
+	padding-top: 16px
+	@media (min-width: 992px)
+		display: flex
+
+.page-navbar
+	border-top: 5px solid $color-green-1
+	background: $color-white
+	top: -99px
+	margin-top: 99px
+	z-index: 999
+	padding-top: 0px
+	padding-bottom: 0px
+	right: 0
+	left: 0
+	position: absolute
+	&.fixed-top
+		position: fixed
+		top: 0
+		margin-top: 0
+		transition: top .5s
+		.navbar-brand
+			img
+				width: 60px
+		.language-box, .nav-box, .sandwich
+			display: none
+
+.border-bottom
+	border-bottom: 1px solid $color-border
+
+.border-bottom-2
+	@media (min-width: 1200px)
+		border-bottom: 1px solid $color-border
+
+.navbar 
+	transition: $transition
+	padding: 0
+	> .container
+		padding-left: 15px
+		padding-right: 15px
+	.navbar-toggler 
+		border: 0 !important
+		padding: 0 !important
+	.navbar-collapse
+		flex-wrap: wrap
+		flex-direction: column
+		.navbar-nav-1
+			margin-left: -4px
+			margin-right: -4px
+			.nav-item 
+				margin: 0 4px
+				text-align: center
+				@media (max-width: 991.98px)
+					margin: 0
+				.nav-link
+					color: $color-black
+					font-weight: 500
+					text-transform: uppercase
+					font-size: 14px
+					display: inline-block
+	.navbar-brand 
+		margin-right: 20px
+		font-size: 0
+		@media (max-width: 991.98px)	
+			margin-right: 0
+		img
+			width: 120px
+			@media (max-width: 575.98px)
+				width: 90px
+
+.sandwich
+	display: inline-block
+	color: $color-green-1
+	cursor: pointer
+	transition: none
+	padding: 0
+	border: 0
+	background-color: $color-white
+	&:hover 
+		opacity: .7
+	&:before
+		width: 23px
+	span
+		width: 23px
+	&:after
+		width: 23px
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 6px
+	span, &:before, &:after
+		display: block
+		transition: $transition
+		transform-origin: right center
+		border-top: 2px solid $color-green-1
+		margin-left: auto
+	&:not(.collapsed)
+		&:before
+			transform: rotate(-45deg)
+			width: 23px
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: rotate(45deg)
+			width: 23px
+	&:hover 
+		opacity: .8
+
+.search
+	position: relative
+	width: 220px
+	@media (max-width: 767.98px)
+		width: auto
+		max-width: 160px
+
+.form-control
+	font-size: 16px
+	height: 40px
+	color: $color-green-1 !important
+	font-weight: bold
+	border-radius: 0
+	border-color: $color-border
+	width: 100% !important
+	@media (max-width: 575.98px)
+		height: 35px
+		font-size: 14px
+	&::-webkit-input-placeholder
+		color: $color-green-1
+		font-weight: bold
+	&::-moz-placeholder
+		color: $color-green-1
+		font-weight: bold
+	&:-ms-input-placeholder
+		color: $color-green-1
+		font-weight: bold
+	&:focus 
+		box-shadow: none
+
+.dropdown-1
+	.dropdown-toggle
+		position: relative
+		padding-left: 20px !important
+		@media (max-width: 991.98px)
+			padding-left: 12px !important
+		&:after 
+			display: none
+	.dropdown-menu
+		margin-top: 0
+		top: 100%
+		padding: 0
+		border-radius: 0
+		border: 1px solid $color-border
+		background-color: $color-white
+		@media (max-width: 991.98px)
+			text-align: center
+			background-color: $color-footer
+		.dropdown-item
+			font-weight: 500
+			text-transform: uppercase
+			font-size: 14px
+			padding: 4px 16px
+			color: $color-black
+			@media (max-width: 575.98px)
+				white-space: initial !important
+			&:hover, &:active
+				background-color: $color-white !important
+				opacity: .7
+	&.dropdown-menu-right
+		@media (min-width: 992px)
+			right: 0
+			transform: none !important
+	.fa-chevron-right
+		position: absolute
+		top: 18px
+		transform: translateY(-50%) rotate(90deg)
+		left: 8px
+		transition: $transition
+		font-size: 9px
+		@media (max-width: 991.98px)
+			left: 0
+
+.footer 
+	padding: 40px 0
+	background: $color-footer
+	margin-top: auto
+	color: $color-black
+	border-top: 1px solid $color-green-2
+	border-bottom: 1px solid $color-green-2
+	font-size: 14px
+	a 
+		color: $color-black
+		text-transform: uppercase
+		display: inline-block
+		margin-bottom: 4px
+		font-weight: 500
+	.title
+		color: $color-green-1
+		font-size: 18px
+		font-weight: bold
+		margin-bottom: 4px
+		font-family: 'Domine', sans-serif
+	@media (max-width: 767.98px)
+		padding: 30px 0
+
+.footer-bottom
+	background: $color-footer-2
+	padding: 25px 0
+	font-size: 12px
+	text-align: center
+	a 
+		color: $color-green-1
+
+.bg-img
+	background-size: cover
+	background-position: center center
+	height: auto
+	cursor: pointer
+
+.img-wrap 
+	overflow: hidden
+	transition: $transition
+	.bg-wrap
+		transition: $transition
+	@media (min-width: 1200px)
+		&:hover
+			.bg-wrap
+				transform: scale(1.1) 
+
+.section-gray
+	padding: 25px 20px
+	border-top: 5px solid $color-green-1
+	background: $color-footer
+	border-bottom: 1px solid $color-border
+
+.block 
+	margin-bottom: 16px
+
+.section-inbox
+	padding: 20px
+	background-position: center center
+	background-size: cover 
+	position: relative
+	border: 1px solid #bdd5b2
+	&:before 
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-image: linear-gradient(to top right, #FFF 30%, transparent)
+	.title
+		color: $color-green-1
+		font-size: 20px
+		font-family: 'Domine', sans-serif
+		font-weight: bold
+		line-height: 1.2
+
+.section-inbox-2
+	padding: 245px 10px 20px
+	background-position: center center
+	background-size: cover 
+	position: relative
+	@media (max-width: 991.98px)
+		padding: 170px 10px 20px
+	&:before 
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(0, 0, 0, 0.4)
+	.title
+		color: $color-white
+		font-size: 20px
+		font-family: 'Domine', sans-serif
+		font-weight: bold
+		line-height: 1.2
+
+.btn-subscribe
+	font-size: 16px
+	font-weight: bold
+	text-transform: uppercase
+	padding: 8px 30px
+	color: $color-white
+	background: $color-green-1
+	border: 0
+	border-radius: 100px
+	transition: $transition
+	&:hover
+		opacity: .9
+
+.btn-send
+	font-size: 12px
+	padding: 6px 24px
+
+.pill-green
+	color: $color-white
+	background: $color-green-1
+	display: inline-block
+	border-radius: 100px
+	text-transform: uppercase
+	font-size: 11px
+	line-height: 18px
+	padding: 2px 10px
+	vertical-align: middle
+	&:hover
+		color: $color-white
+		opacity: .8
+
+.date-box
+	font-size: 14px
+	font-family: 'Domine', sans-serif
+	line-height: 1.2
+
+.pagination 
+	.page-link 
+		color: $color-green-1
+		font-size: 14px
+		font-weight: bold
+		border-radius: 0 !important
+		border: 1px solid $color-green-3
+		text-transform: uppercase
+		@media (max-width: 575.98px)
+			font-size: 11px
+		&:hover, &.active
+			background: $color-green-3
+			color: $color-white
+			opacity: 1
+		&:focus 
+			box-shadow: none
+		.fa-arrow-right-long
+			font-size: 8px
+
+.filters-box	
+	padding: 40px 0
+	border-top: 1px solid $color-border
+	border-bottom: 1px solid $color-border
+	.title
+		font-family: 'Domine', sans-serif
+		font-size: 18px
+		font-weight: bold
+	.filter-pill
+		display: inline-block
+		color: $color-white
+		background: $color-green-1
+		border-radius: 100px
+		padding: 6px 16px
+		font-size: 12px
+		text-transform: uppercase
+		font-weight: bold
+
+.filter-close
+	display: inline-block
+	border-radius: 100px
+	background: $color-green-3
+	color: $color-black
+	width: 30px
+	height: 30px
+	line-height: 30px
+	text-align: center
+	font-size: 18px
+
+.social-box
+	max-width: 280px
+	width: 100%
+	display: inline-block
+	padding: 10px 0
+	@media (min-width: 992px)
+		padding: 10px 20px
+		float: right
+		margin-left: 16px
+		border-left: 1px solid $color-border
+	.title-social
+		text-transform: uppercase
+		font-size: 14px
+		font-family: 'Domine', sans-serif
+		font-weight: bold
+
+.social-icons
+	display: flex
+	margin-bottom: 12px
+	.nav-link
+		padding: 6.5px
+		transition: $transition
+		&:hover 
+			opacity: .7
+		img
+			height: 33px
+			width: 33px
+			max-height: 33px
+			border-radius: 100px
