@@ -298,7 +298,8 @@ a {
     color: #44931f;
     font-weight: bold; }
   .form-control:focus {
-    box-shadow: none; }
+    box-shadow: none;
+    border-color: #c7debb; }
 
 .dropdown-1 .dropdown-toggle {
   position: relative;
